@@ -34,3 +34,15 @@ def to_weird_case(string):
 
 
 print(to_weird_case('ThIs Is A TeSt'))
+
+
+# the highest rated solution:
+
+def f1(word):
+    return "".join([c.upper() if n % 2 == 0 else c for n, c in enumerate(word.lower())])
+
+
+def f2(string):
+    return " ".join([f1(word) for word in string.split()])
+
+print(f2("Ciekawe czy zadziala"))
